@@ -64,7 +64,9 @@ function App(): ReactElement {
         </Stack.Navigator>
       ) : (
         <Stack.Navigator>
-          <Stack.Screen name="Login" component={(props) => <LoginScreen {...props} setIsUserLoggedIn={setIsUserLoggedIn} />} />
+          <Stack.Screen name="Login">
+            {(props) => <LoginScreen {...props} setIsUserLoggedIn={setIsUserLoggedIn} />}
+          </Stack.Screen>
         </Stack.Navigator>
       )}
     </NavigationContainer>
