@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { View, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { app, analytics } from './firebase'; // Adjust the path as necessary
 
 import HomeScreen from './HomeScreen';
 import LoginScreen from './LoginScreen';
@@ -11,6 +10,7 @@ import ImageGeneration from './ImageGeneration';
 import PublicGallery from './PublicGallery';
 import CaptionGeneration from './CaptionGeneration';
 import ExportImage from './ExportImage';
+import { app, analytics } from './firebaseConfig'; // Adjust the path as necessary
 
 const Stack = createNativeStackNavigator();
 
