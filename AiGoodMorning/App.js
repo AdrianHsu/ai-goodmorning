@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { View, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { app, analytics } from './firebase'; // Adjust the path as necessary
+
 import HomeScreen from './HomeScreen';
 import LoginScreen from './LoginScreen';
 import LoadingScreen from './LoadingScreen';
