@@ -11,7 +11,8 @@ import ImageGeneration from './ImageGeneration';
 import PublicGallery from './PublicGallery';
 import CaptionGeneration from './CaptionGeneration';
 import ExportImage from './ExportImage';
-import { app, analytics } from './firebaseConfig'; // Adjust the path as necessary
+import { app, analytics, db } from './firebaseConfig'; // Adjust the path as necessary
+import GoogleLogin from './GoogleLogin'; // Adjust the path based on your structure
 
 // Define the type for the stack navigator (if you have params, they should be defined here)
 export type RootStackParamList = {
@@ -22,6 +23,7 @@ export type RootStackParamList = {
   ExportImage: undefined;
   Loading: undefined;
   Login: undefined;
+  GoogleLogin: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -67,6 +69,7 @@ function App(): ReactElement {
           <Stack.Screen name="Login">
             {(props) => <LoginScreen {...props} setIsUserLoggedIn={setIsUserLoggedIn} />}
           </Stack.Screen>
+          <Stack.Screen name="GoogleLogin" component={GoogleLogin} />
         </Stack.Navigator>
       )}
     </NavigationContainer>
