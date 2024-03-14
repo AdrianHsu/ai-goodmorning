@@ -64,17 +64,9 @@ function App(): ReactElement {
         </Stack.Navigator>
       ) : (
         <Stack.Navigator>
-<<<<<<< HEAD
           <Stack.Screen name="Login">
             {(props) => <LoginScreen {...props} setIsUserLoggedIn={setIsUserLoggedIn} />}
           </Stack.Screen>
-<<<<<<< HEAD
-          <Stack.Screen name="GoogleLogin" component={GoogleLogin} />
-=======
-          <Stack.Screen name="Login" component={(props) => <LoginScreen {...props} setIsUserLoggedIn={setIsUserLoggedIn} />} />
->>>>>>> parent of dd7dc52 (fix inline)
-=======
->>>>>>> parent of 06941c1 (need to switch to expo dev build)
         </Stack.Navigator>
       )}
     </NavigationContainer>
