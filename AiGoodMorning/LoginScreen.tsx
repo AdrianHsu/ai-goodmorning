@@ -1,15 +1,12 @@
 import React from 'react';
 import { View, Button } from 'react-native';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
-type GoogleLoginNavigationProp = NativeStackNavigationProp<any>;
+// Define the props type
+interface LoginScreenProps {
+  setIsUserLoggedIn: (value: boolean) => void; // Assuming setIsUserLoggedIn updates a boolean state
+}
 
-type Props = {
-  setIsUserLoggedIn: (value: boolean) => void; // Assuming setIsUserLoggedIn updates a boolean state\
-  navigation: GoogleLoginNavigationProp;
-};
-
-const LoginScreen: React.FC<Props> = ({ navigation, setIsUserLoggedIn }) => {
+const LoginScreen: React.FC<LoginScreenProps> = ({ setIsUserLoggedIn }) => {
   const logIn = () => {
     // Logic for logging in (authentication)
     // On successful login, setIsUserLoggedIn should be called with true
@@ -18,7 +15,7 @@ const LoginScreen: React.FC<Props> = ({ navigation, setIsUserLoggedIn }) => {
 
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Button title="Log In" onPress={() => navigation.navigate('GoogleLogin')} />
+      <Button title="Log In" onPress={logIn} />
     </View>
   );
 }
