@@ -66,10 +66,14 @@ function App(): ReactElement {
         </Stack.Navigator>
       ) : (
         <Stack.Navigator>
+<<<<<<< HEAD
           <Stack.Screen name="Login">
             {(props) => <LoginScreen {...props} setIsUserLoggedIn={setIsUserLoggedIn} />}
           </Stack.Screen>
           <Stack.Screen name="GoogleLogin" component={GoogleLogin} />
+=======
+          <Stack.Screen name="Login" component={(props) => <LoginScreen {...props} setIsUserLoggedIn={setIsUserLoggedIn} />} />
+>>>>>>> parent of dd7dc52 (fix inline)
         </Stack.Navigator>
       )}
     </NavigationContainer>
