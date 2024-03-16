@@ -1,7 +1,8 @@
 import React, { useState, useEffect, ReactElement } from 'react';
-import { View, Button } from 'react-native';
+import { View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator, NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { Button } from '@rneui/base';
 
 // Importing components and assuming these are also converted to TypeScript
 import HomeScreen from './src/HomeScreen';
@@ -44,7 +45,13 @@ function App(): ReactElement {
 
   const screenOptions = {
     headerRight: () => (
-      <Button onPress={logOut} title="Logout" color="#000" />
+      <Button onPress={logOut} title="登出"
+      containerStyle={{
+        width: 75,
+        marginHorizontal: 20,
+        marginVertical: 5,
+      }}
+      />
     ),
   };
 
