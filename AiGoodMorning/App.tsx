@@ -4,14 +4,14 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator, NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 // Importing components and assuming these are also converted to TypeScript
-import HomeScreen from './HomeScreen';
-import LoginScreen from './LoginScreen';
-import LoadingScreen from './LoadingScreen';
-import ImageGeneration from './ImageGeneration';
-import PublicGallery from './PublicGallery';
-import CaptionGeneration from './CaptionGeneration';
-import ExportImage from './ExportImage';
-import { app, analytics } from './firebaseConfig'; // Adjust the path as necessary
+import HomeScreen from './src/HomeScreen';
+import LoginScreen from './src/LoginScreen';
+import LoadingScreen from './src/LoadingScreen';
+import ImageGeneration from './src/ImageGeneration';
+import PublicGallery from './src/PublicGallery';
+import CaptionGeneration from './src/CaptionGeneration';
+import ExportImage from './src/ExportImage';
+import { app, analytics } from './src/firebaseConfig'; // Adjust the path as necessary
 
 // Define the type for the stack navigator (if you have params, they should be defined here)
 export type RootStackParamList = {

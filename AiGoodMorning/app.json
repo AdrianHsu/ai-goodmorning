@@ -1,9 +1,9 @@
-{
+  {
   "expo": {
     "name": "AiGoodMorning",
     "slug": "AiGoodMorning",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "ori  ation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
