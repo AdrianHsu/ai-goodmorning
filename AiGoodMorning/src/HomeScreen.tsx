@@ -58,8 +58,8 @@ const styles = StyleSheet.create({
     padding: 10, // Add padding to prevent image from stretching to the screen edges
   },
   responsiveImage: {
-    width: '40%', // Make image width relative to the container
-    height: undefined, // Ensure the height is dynamic
+    width: undefined, // Make image width relative to the container
+    height: '100%', // Ensure the height is dynamic
     aspectRatio: 1, // Adjust according to your image's aspect ratio
     resizeMode: 'contain', // Contain the image within the bounds of the view
   },

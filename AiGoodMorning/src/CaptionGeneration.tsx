@@ -67,15 +67,16 @@ const styles = StyleSheet.create({
     width: 20, // Space between buttons
   },
   imageContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 10, // Add padding to prevent image from stretching to the screen edges
+    width: 100%, /* Make the container fill the available width */
+    height: auto, /* Keep height automatic to maintain aspect ratio */
+    display: flex, /* Use flexbox for centering if needed */
+    justify-content: center, /* Center horizontally */
+    align-items: center, /* Center vertically */
   },
   responsiveImage: {
     width: undefined, // Make image width relative to the container
     height: '100%', // Ensure the height is dynamic
-    aspectRatio: 0.8, // Adjust according to your image's aspect ratio
+    aspectRatio: 1, // Adjust according to your image's aspect ratio
     resizeMode: 'contain', // Contain the image within the bounds of the view
   },
 });
