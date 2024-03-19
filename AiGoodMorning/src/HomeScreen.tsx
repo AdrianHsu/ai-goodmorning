@@ -13,15 +13,16 @@ type Props = {
 
 const HomeScreen: React.FC<Props> = ({ navigation }) => {
   return (
-    <View style={{ flex: 0.8, alignItems: 'center', justifyContent: 'center' }}>
-      <View style={styles.container}>
+    <View style={{ flex: 1 }}>
+      <View style={[styles.container, {flex : 0.6}]}>
         <Image
           source={require('../assets/logo.png')}
           // Apply the responsive style
           style={styles.responsiveImage}
         />
       </View>
-
+      {/* Adjust the remaining space for button containers */}
+      <View style={[styles.buttonContainer, { flex: 0.4 }]}>
       <Button
         title="開始做圖"
         type="outline"
@@ -45,6 +46,7 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
         onPress={() => navigation.navigate('PublicGallery')}
       />
     </View>
+    </View>
   );
 };
 
@@ -62,6 +64,11 @@ const styles = StyleSheet.create({
     height: '100%', // Ensure the height is dynamic
     aspectRatio: 1, // Adjust according to your image's aspect ratio
     resizeMode: 'contain', // Contain the image within the bounds of the view
+  },
+  buttonContainer: {
+    padding: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 

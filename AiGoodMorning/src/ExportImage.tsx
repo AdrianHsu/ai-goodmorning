@@ -12,16 +12,15 @@ type Props = {
 
 const ExportImage: React.FC<Props> = ({ navigation }) => {
   return (
-    <View>
-      <View style={styles.imageContainer}>
+    <View style={{flex : 1}}>
+      <View style={[styles.imageContainer, {flex : 0.75}]}>
           <Image
             source={require('../assets/placeholder.png')}
             // Apply the responsive style
             style={styles.responsiveImage}
           />
       </View>
-
-      <View style={styles.container}>
+      <View style={[styles.buttonContainer, { flexDirection: 'row', justifyContent: 'space-around', flex: 0.1 }]}>
         <Button
           title="傳 Line"
           onPress={() => navigation.popToTop()}
@@ -40,26 +39,21 @@ const ExportImage: React.FC<Props> = ({ navigation }) => {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row', // Align children in a row.
-    justifyContent: 'space-between', // Distribute children evenly across the container's main axis.
-    marginHorizontal: 50,
-    marginVertical: 10,
-  },
-  space: {
-    width: 20, // Space between buttons
-  },
   imageContainer: {
-    flex: 0.5,
+    width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 10, // Add padding to prevent image from stretching to the screen edges
+    overflow: 'hidden',
+  },
+  buttonContainer: {
+    padding: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   responsiveImage: {
-    width: undefined, // Make image width relative to the container
-    height: '100%', // Ensure the height is dynamic
-    aspectRatio: 1, // Adjust according to your image's aspect ratio
-    resizeMode: 'contain', // Contain the image within the bounds of the view
+    width: '100%',
+    height: '100%',
+    resizeMode: 'contain',
   },
 });
 export default ExportImage;
