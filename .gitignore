@@ -5,7 +5,8 @@ node_modules/
 firebaseConfig.tsx
 package-lock.json
 .env
-
+*.psd
+photoshop
 # Expo
 .expo/
 dist/
